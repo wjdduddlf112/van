@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VAN Conference Invitation PDF</title>
+  <style>
+    :root{
+      --ink:#14182A;
+      --paper:#F4EFE5;
+      --paper-2:#ECE4D5;
+      --brass:#A8814D;
+      --brass-2:#C9A063;
+      --text:#1D2236;
+      --soft:#5A6075;
+      --on-dark:#ECE7DC;
+      --on-dark-soft:#BFC2CE;
+      --line:rgba(29,34,54,.14);
+      --line-dark:rgba(236,231,220,.16);
+      --serif:"Hahmlet","Noto Serif KR","Batang",serif;
+      --sans:"Pretendard","Noto Sans KR","Malgun Gothic",Arial,sans-serif;
+      --mono:"IBM Plex Mono","Consolas",monospace;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;background:var(--paper);color:var(--text);font-family:var(--sans);line-height:1.7}
+    body{padding:0}
+    .page{
+      width:210mm;
+      height:297mm;
+      min-height:297mm;
+      margin:0;
+      padding:18mm;
+      background:var(--paper);
+      position:relative;
+      overflow:hidden;
+      break-after:page;
+      box-shadow:none;
+    }
+    .page.fixed{height:297mm}
+    .page.navy{background:var(--ink);color:var(--on-dark)}
+    .page:last-child{break-after:auto}
+    .wrap{position:relative;z-index:2}
+    .strata{position:absolute;inset:0;opacity:.58;pointer-events:none}
+    .eyebrow{font-family:var(--mono);font-size:9.5px;letter-spacing:.28em;text-transform:uppercase;color:var(--brass);font-weight:600}
+    .navy .eyebrow{color:var(--brass-2)}
+    h1,h2,h3{font-family:var(--serif);margin:0;line-height:1.18;letter-spacing:-.01em}
+    h1{font-size:45px;font-weight:600}
+    h1 em{font-style:normal;color:var(--brass-2)}
+    h2{font-size:29px;font-weight:600}
+    h3{font-size:22px;font-weight:600}
+    p{margin:0;color:var(--soft);font-size:12.2px}
+    .navy p{color:var(--on-dark-soft)}
+    .brand-logo{position:absolute;top:16mm;left:18mm;width:40mm;height:auto;display:block}
+    .cover-meta{position:absolute;top:18mm;right:18mm;text-align:right;font-family:var(--serif);font-style:italic;color:var(--on-dark-soft);font-size:12px;line-height:1.6}
+    .cover-title{margin-top:112mm}
+    .subtitle{font-family:var(--serif);font-style:italic;color:var(--on-dark-soft);font-size:17px;margin-top:12px}
+    .facts{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line-dark);margin-top:34px}
+    .fact{padding:15px 12px 0 0;border-right:1px solid var(--line-dark);min-height:54px}
+    .fact:last-child{border-right:0}
+    .fl{font-family:var(--mono);font-size:8.8px;letter-spacing:.18em;text-transform:uppercase;color:var(--brass-2);margin-bottom:7px}
+    .fv{font-family:var(--serif);font-size:14px;font-weight:600;line-height:1.35}
+    .fv small{display:block;font-family:var(--sans);font-size:9.8px;font-weight:400;color:var(--on-dark-soft);margin-top:2px}
+    .page-no{position:absolute;right:18mm;bottom:12mm;font-family:var(--mono);font-size:9px;color:var(--brass);letter-spacing:.12em}
+    .navy .page-no{color:var(--brass-2)}
+    .section-head{display:flex;align-items:flex-end;justify-content:space-between;border-bottom:1px solid var(--line);padding-bottom:8mm;margin-bottom:8mm}
+    .navy .section-head{border-color:var(--line-dark)}
+    .num{font-family:var(--mono);font-size:10px;color:var(--soft);letter-spacing:.12em}
+    .navy .num{color:var(--on-dark-soft)}
+    .lede{font-family:var(--serif);font-size:18px;line-height:1.7;font-weight:500;max-width:162mm}
+    .lede em{font-style:normal;color:var(--brass)}
+    .body-copy{margin-top:7mm;font-size:12.4px;line-height:1.85;max-width:160mm}
+    .pillars{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:11mm}
+    .pillar{background:var(--paper);padding:5mm 4.5mm;min-height:30mm}
+    .pillar .pn{font-family:var(--mono);font-size:9px;letter-spacing:.16em;color:var(--brass)}
+    .pillar .pt{font-family:var(--serif);font-size:14.5px;font-weight:700;margin-top:2mm}
+    .pillar .pd{font-size:10.3px;color:var(--soft);margin-top:1mm}
+    .timeline{border-left:1px solid var(--line-dark);margin-left:1.5mm;margin-top:2mm}
+    .tl{position:relative;display:grid;grid-template-columns:32mm 1fr;gap:7mm;padding:4mm 0 4mm 7mm;border-bottom:1px solid var(--line-dark)}
+    .tl::before{content:"";position:absolute;left:-1.1mm;top:6mm;width:2mm;height:2mm;border-radius:50%;background:var(--ink);border:1px solid var(--on-dark-soft)}
+    .tl.key::before{background:var(--brass-2);border-color:var(--brass-2)}
+    .time{font-family:var(--mono);font-size:10.5px;color:var(--brass-2);white-space:nowrap}
+    .event b{font-family:var(--serif);font-size:14px;color:var(--on-dark);font-weight:600}
+    .event small{display:block;color:var(--on-dark-soft);font-size:10.4px;margin-top:1mm}
+    .session{padding:0 0 8mm;border-bottom:1px solid var(--line);margin-bottom:8mm}
+    .session:last-child{border-bottom:0}
+    .session-grid{display:grid;grid-template-columns:24mm 1fr;gap:9mm}
+    .s-num{font-family:var(--serif);font-size:44px;font-weight:700;color:var(--brass);line-height:.9}
+    .s-num span{display:block;font-family:var(--mono);font-size:8px;letter-spacing:.2em;color:var(--soft);text-transform:uppercase;margin-top:4mm}
+    .meta{display:flex;flex-wrap:wrap;gap:3mm 8mm;margin:4mm 0 5mm;padding:3.5mm 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .meta div{display:flex;flex-direction:column;gap:1mm}
+    .ml{font-family:var(--mono);font-size:8.2px;letter-spacing:.14em;text-transform:uppercase;color:var(--brass)}
+    .mv{font-size:10.8px;color:var(--text);font-weight:600}
+    .desc{font-size:11.2px;line-height:1.78;color:var(--soft)}
+    .roster-label{font-family:var(--serif);font-size:13.2px;font-weight:700;color:var(--brass);margin:7mm 0 3.5mm;display:flex;align-items:center;gap:4mm}
+    .roster-label::after{content:"";flex:1;height:1px;background:var(--line)}
+    .roster{display:grid;gap:0;border:1px solid var(--line);background:var(--line)}
+    .person{display:grid;grid-template-columns:46mm 1fr;gap:7mm;background:var(--paper);padding:4.4mm 5mm;border-bottom:1px solid var(--line);align-items:start}
+    .person:last-child{border-bottom:0}
+    .pname{font-family:var(--serif);font-size:15.5px;font-weight:700;line-height:1.25}
+    .tag{display:block;font-family:var(--mono);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--brass);margin-top:2mm}
+    .pinfo{font-size:11.2px;line-height:1.65;color:var(--soft)}
+    .lead{color:var(--text);font-weight:700}
+    .session-line{color:var(--brass);font-weight:700}
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:6mm}
+    .info-box{border:1px solid var(--line);padding:5.5mm;background:rgba(255,255,255,.1)}
+    .info-box h3{font-size:18px}
+    .info-box p{font-size:11px;margin-top:3mm}
+    .info-list{display:grid;gap:2.6mm;margin-top:4mm}
+    .info-list div{display:grid;grid-template-columns:28mm 1fr;gap:4mm}
+    .info-list dt{font-family:var(--mono);font-size:8.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--brass);margin:0}
+    .info-list dd{font-size:11.4px;margin:0;font-weight:700;overflow-wrap:anywhere}
+    .map-row{display:grid;grid-template-columns:1fr 82mm;gap:7mm;margin-top:7mm;align-items:start}
+    .venue-copy{border:1px solid var(--line);padding:5.5mm}
+    .venue-copy h3{font-size:18px}
+    .venue-copy ul{margin:5mm 0 0;padding-left:4mm;color:var(--soft);font-size:10.8px;line-height:1.7}
+    .map{margin:0;border:1px solid var(--line);padding:2mm;background:var(--paper-2)}
+    .map img{display:block;width:100%;height:55mm;object-fit:cover;border:1px solid var(--line)}
+    .notice{font-size:10px;line-height:1.6;margin-top:5mm}
+    .sponsor-page .sponsor-wall{height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+    .sponsor-page h2{font-size:31px;line-height:1.38;color:var(--on-dark);margin-top:3mm}
+    .sponsor-page h2 span{display:block}
+    .sponsor-grid-print{width:100%;display:grid;grid-template-columns:repeat(4,1fr);gap:14mm 9mm;align-items:center;margin-top:24mm}
+    .sponsor-logo-print{min-height:19mm;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+    .sponsor-logo-print .role{font-family:var(--mono);font-size:7.2px;letter-spacing:.14em;text-transform:uppercase;color:var(--brass-2);margin-bottom:2mm}
+    .sponsor-logo-print .name{font-family:var(--serif);font-size:13px;line-height:1.28;font-weight:700;color:var(--on-dark)}
+    .sponsor-logo-print .name.long{font-size:9.8px;line-height:1.45}
+    .sponsor-logo-print .name.en{font-family:var(--sans);font-size:11.5px;letter-spacing:.01em}
+    .end-mark{height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+    .end-logo{width:72mm;height:auto;display:block}
+    .end-mark .line{width:56mm;height:1px;background:var(--line-dark);margin:12mm 0}
+    .end-mark p{font-family:var(--serif);font-size:15px;letter-spacing:.04em;color:var(--on-dark-soft)}
+    @page{size:A4;margin:0}
+    @media print{
+      html,body{background:white;padding:0}
+      .page{margin:0;box-shadow:none}
+      *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    }
+  </style>
+</head>
+<body>
+  <section class="page fixed navy">
+    <svg class="strata" preserveAspectRatio="none" viewBox="0 0 1440 600" aria-hidden="true">
+      <g stroke="rgba(236,231,220,0.10)" stroke-width="1" fill="none">
+        <path d="M0,150 L820,150 L860,138 L1440,138"></path>
+        <path d="M0,250 L760,250 L800,266 L1440,266"></path>
+        <path d="M0,360 L900,360 L940,344 L1440,344"></path>
+        <path d="M0,470 L680,470 L720,488 L1440,488"></path>
+      </g>
+    </svg>
+    <img class="brand-logo" src="assets/van-thumbnail.png" alt="VAN Veritas Academiae Nexus">
+    <div class="cover-meta">2026 Conference<br>Seoul</div>
+    <div class="wrap cover-title">
+      <div class="eyebrow">서울권 대학 학회·학술 총연합체 VAN</div>
+      <h1 style="margin-top:9mm">대격변의 시대,<br><em>혁신</em>을 묻다</h1>
+      <div class="subtitle">The Arena of Innovation</div>
+      <div class="facts">
+        <div class="fact"><div class="fl">Date</div><div class="fv">2026. 09. 12.<small>토요일 14:00-18:00</small></div></div>
+        <div class="fact"><div class="fl">Venue</div><div class="fv">숙명여자대학교<small>눈꽃광장홀</small></div></div>
+        <div class="fact"><div class="fl">Audience</div><div class="fv">수백 명 규모<small>전국 대학생 및 청년</small></div></div>
+        <div class="fact"><div class="fl">After</div><div class="fv">Networking Night<small>알럼나이 네트워킹 나잇</small></div></div>
+      </div>
+    </div>
+    <div class="page-no">01</div>
+  </section>
+
+  <section class="page fixed">
+    <div class="section-head">
+      <div><div class="eyebrow">Overview</div><h2>개요</h2></div>
+      <div class="num">02</div>
+    </div>
+    <p class="lede">VAN은 급격한 기술 변화와 사회 구조의 전환 속에서, 오늘의 청년 세대가 마주한 핵심 질문을 함께 논의하기 위해 <em>「대격변의 시대, 혁신을 묻다」</em>를 개최합니다.</p>
+    <p class="body-copy">기술패권 경쟁과 산업구조의 전환, 정치·사회 시스템의 재설계라는 시대적 과제를 중심으로 정계·산업계·학계와 청년 세대가 함께 대한민국의 미래 전략을 논의합니다. 2026년 9월 12일 토요일, 숙명여자대학교 눈꽃광장홀에서 전국 대학생 및 청년 수백 명 규모로 진행됩니다.</p>
+    <div class="pillars">
+      <div class="pillar"><div class="pn">S1</div><div class="pt">기술혁신</div><div class="pd">AI·양자·국방·첨단산업 전략</div></div>
+      <div class="pillar"><div class="pn">S2</div><div class="pt">사회·정치혁신</div><div class="pd">현역 국회의원 정책 토론</div></div>
+      <div class="pillar"><div class="pn">S3</div><div class="pt">디스커션</div><div class="pd">팀별 참여형 공론장</div></div>
+      <div class="pillar"><div class="pn">S4</div><div class="pt">네트워킹 나잇</div><div class="pd">분야별 알럼나이 교류</div></div>
+    </div>
+    <div class="page-no">02</div>
+  </section>
+
+  <section class="page fixed navy">
+    <div class="section-head">
+      <div><div class="eyebrow">Program</div><h2>타임테이블</h2></div>
+      <div class="num">03</div>
+    </div>
+    <div class="timeline">
+      <div class="tl"><div class="time">13:30-14:00</div><div class="event"><b>부스 운영 및 입장</b><small>도서 · 포토 · 팝업 · 후원 부스</small></div></div>
+      <div class="tl"><div class="time">14:00-14:40</div><div class="event"><b>개회 및 공식 순서</b><small>소개 · 축사 · 사진 촬영</small></div></div>
+      <div class="tl key"><div class="time">14:40-15:50</div><div class="event"><b>기술혁신</b><small>2026 대한민국 기술전략회의</small></div></div>
+      <div class="tl"><div class="time">15:50-16:00</div><div class="event"><b>휴식</b></div></div>
+      <div class="tl key"><div class="time">16:00-17:20</div><div class="event"><b>사회·정치혁신</b><small>2050 대한민국 미래대선</small></div></div>
+      <div class="tl key"><div class="time">17:20-17:50</div><div class="event"><b>종합 디스커션</b></div></div>
+      <div class="tl"><div class="time">17:50-18:00</div><div class="event"><b>마무리 멘트 및 네트워킹 장소 이동 안내</b></div></div>
+      <div class="tl key"><div class="time">18:30-</div><div class="event"><b>Networking Night with Alumni</b></div></div>
+    </div>
+    <div class="page-no">03</div>
+  </section>
+
+  <section class="page">
+    <div class="section-head">
+      <div><div class="eyebrow">Sessions</div><h2>세션 구성</h2></div>
+      <div class="num">04</div>
+    </div>
+    <article class="session">
+      <div class="session-grid">
+        <div class="s-num">01<span>Session</span></div>
+        <div>
+          <h3>기술혁신</h3>
+          <div class="meta">
+            <div><span class="ml">Format</span><span class="mv">토크콘서트 형식의 토의 세션</span></div>
+            <div><span class="ml">Time</span><span class="mv">약 1시간 10분 예정</span></div>
+            <div><span class="ml">Speakers</span><span class="mv">AI·양자·국방·첨단산업 전문가</span></div>
+          </div>
+          <p class="desc">본 세션은 생성형 AI를 중심으로 급격히 전개되고 있는 기술혁신의 흐름을 학술적 관점에서 거시적으로 조망합니다. 단순한 기술 소개를 넘어, 오늘날 기술혁신이 어떠한 원리와 방향 속에서 전개되고 있는지, 그리고 첨단 기술이 산업과 시장 질서를 어떻게 재편하고 있는지를 폭넓게 논의합니다. 국가 차원에서는 기술패권 경쟁이 심화되는 국제 환경 속 대한민국이 확보해야 할 전략적 위치와 경쟁 우위를, 개인 차원에서는 기술혁신 이후 변화하는 인간의 삶과 노동, 가치와 선택의 문제를 함께 성찰합니다.</p>
+        </div>
+      </div>
+    </article>
+    <article class="session">
+      <div class="session-grid">
+        <div class="s-num">02<span>Session</span></div>
+        <div>
+          <h3>사회·정치혁신</h3>
+          <div class="meta">
+            <div><span class="ml">Format</span><span class="mv">토크콘서트 형식의 토론 세션</span></div>
+            <div><span class="ml">Time</span><span class="mv">약 1시간 20분 예정</span></div>
+            <div><span class="ml">Panel</span><span class="mv">여러 정당의 현역 국회의원</span></div>
+          </div>
+          <p class="desc">대격변의 시대 속에서 대한민국의 사회·정치 혁신이 어떠한 방향으로 이루어져야 하는지를 조망합니다. 단기 현안과 정책 경쟁에 머무르는 흐름을 넘어, 뉴노멀 이후 대한민국의 백년대계를 어떠한 비전과 철학 위에서 재설계할 것인지 논의하는 것을 목표로 합니다. 개별 현안에 대한 단편적 논의를 넘어, 정치·사회·법 제도의 구조적 개혁, 미래 국가 비전, 청년 세대가 바라보는 공공성과 책임의 문제를 밀도 있게 다룹니다. 각 정당을 대표하는 젊은 현역 의원들과 함께, 오늘의 대한민국에 요구되는 사회·정치 혁신의 방향을 고민하는 자리가 될 것입니다.</p>
+        </div>
+      </div>
+    </article>
+    <div class="page-no">04</div>
+  </section>
+
+  <section class="page">
+    <div class="section-head">
+      <div><div class="eyebrow">Speakers</div><h2>확정 연사</h2></div>
+      <div class="num">05</div>
+    </div>
+    <div class="roster-label">Session 1. 기술혁신</div>
+    <div class="roster">
+      <div class="person">
+        <div class="pname">Kenneth Maxwell Nance<span class="tag">Keynote</span></div>
+        <div class="pinfo"><span class="lead">하버드 박사 · 미 인트라넷 창시</span><br><span class="session-line">Session 1. 기술혁신</span><br>기술 정책과 디지털 인프라의 발전 경험을 바탕으로 혁신의 방향을 논의합니다.</div>
+      </div>
+      <div class="person">
+        <div class="pname">이광희<span class="tag">Industry</span></div>
+        <div class="pinfo"><span class="lead">VIV Tech. CTO</span><br><span class="session-line">Session 1. 기술혁신</span><br>AI 연구개발과 산업 현장 경험을 바탕으로 생성형 AI의 변화와 활용 가능성을 논의합니다.</div>
+      </div>
+      <div class="person">
+        <div class="pname">김진홍<span class="tag">Defense</span></div>
+        <div class="pinfo"><span class="lead">공군(방공유도탄) 사령관</span><br><span class="session-line">Session 1. 기술혁신</span><br>국방 및 방공유도탄 분야의 경험을 바탕으로 기술혁신과 안보의 접점을 논의합니다.</div>
+      </div>
+      <div class="person">
+        <div class="pname">김성혁<span class="tag">Industry</span></div>
+        <div class="pinfo"><span class="lead">LG전자 상무</span><br><span class="session-line">Session 1. 기술혁신</span><br>AI 센싱과 양자 AI를 중심으로 산업 현장에서 구현되는 기술혁신의 방향을 논의합니다.</div>
+      </div>
+      <div class="person">
+        <div class="pname">임영일<span class="tag">Defense</span></div>
+        <div class="pinfo"><span class="lead">국방기술진흥연구소장</span><br><span class="session-line">Session 1. 기술혁신</span><br>국방기술과 미래 안보 환경의 변화 속에서 기술혁신의 전략적 의미를 논의합니다.</div>
+      </div>
+    </div>
+    <div class="page-no">05</div>
+  </section>
+
+  <section class="page fixed">
+    <div class="section-head">
+      <div><div class="eyebrow">Speakers</div><h2>사회·정치혁신 연사</h2></div>
+      <div class="num">06</div>
+    </div>
+    <div class="roster-label">Session 2. 사회·정치혁신</div>
+    <div class="roster">
+      <div class="person"><div class="pname">김재섭<span class="tag">국민의힘</span></div><div class="pinfo"><span class="lead">제22대 (현역) 국회의원</span><br>서울 도봉구갑</div></div>
+      <div class="person"><div class="pname">천하람<span class="tag">개혁신당</span></div><div class="pinfo"><span class="lead">제22대 (현역) 국회의원</span><br>비례대표</div></div>
+      <div class="person"><div class="pname">김동아<span class="tag">더불어민주당</span></div><div class="pinfo"><span class="lead">제22대 (현역) 국회의원</span><br>서울 서대문구갑</div></div>
+      <div class="person"><div class="pname">손솔<span class="tag">진보당</span></div><div class="pinfo"><span class="lead">제22대 (현역) 국회의원</span><br>비례대표</div></div>
+    </div>
+    <p class="desc" data-politics-note style="font-size:9.5px;line-height:1.6;margin-top:3mm">* 국회 원구성 지연 및 의정 일정 변동에 따라 참여 국회의원은 변경될 수 있습니다.</p>
+    <div class="page-no">06</div>
+  </section>
+
+  <section class="page">
+    <div class="section-head">
+      <div><div class="eyebrow">Discussion & Networking</div><h2>디스커션 · 네트워킹</h2></div>
+      <div class="num">07</div>
+    </div>
+    <article class="session">
+      <div class="session-grid">
+        <div class="s-num">03<span>Session</span></div>
+        <div>
+          <h3>디스커션</h3>
+          <div class="meta">
+            <div><span class="ml">Format</span><span class="mv">팀별 디스커션</span></div>
+            <div><span class="ml">Time</span><span class="mv">약 30분 예정</span></div>
+            <div><span class="ml">Topic</span><span class="mv">세션 1·2 연계 사전 지정 의제</span></div>
+            <div><span class="ml">Host</span><span class="mv">VAN 산하 상설연구조직 주도</span></div>
+          </div>
+          <p class="desc">VAN 산하 상설연구조직이 사전에 구성한 기술혁신 및 사회혁신 관련 주요 의제를 바탕으로 참가자들이 팀별 디스커션을 진행합니다. 앞선 세션에서 제기된 쟁점을 단순히 청취하는 데 그치지 않고, 참가자들이 직접 분석하고 자신의 관점으로 재구성하며, 이를 사회적 실천과 정책적 상상력으로 확장할 수 있도록 설계합니다. 본 컨퍼런스가 일방향 강연을 넘어, 청년들이 스스로 질문하고 토론하는 참여형 공론장으로 기능하도록 구성합니다.</p>
+        </div>
+      </div>
+    </article>
+    <article class="session">
+      <div class="session-grid">
+        <div class="s-num">04<span>Session</span></div>
+        <div>
+          <h3>알럼나이와 함께하는 네트워킹 나잇</h3>
+          <div class="meta">
+            <div><span class="ml">Format</span><span class="mv">분야별 테이블 네트워킹</span></div>
+            <div><span class="ml">Host</span><span class="mv">VAN 교류진흥부 주도</span></div>
+            <div><span class="ml">Participants</span><span class="mv">연사 · 내빈 · 알럼나이 · 참가자</span></div>
+            <div><span class="ml">Alumni</span><span class="mv">20인 이상 사전 섭외</span></div>
+          </div>
+          <div class="roster-label">확정 대표 알럼나이</div>
+          <div class="roster">
+            <div class="person"><div class="pname">오종훈<span class="tag">Energy</span></div><div class="pinfo"><span class="lead">SK에너지 대표이사 사장</span><br>SK Portfolio Mgmt. 임원 · 연세대 법학 출신</div></div>
+            <div class="person"><div class="pname">이주호<span class="tag">Beauty</span></div><div class="pinfo"><span class="lead">Dr.G(닥터지) 대표</span><br>연세대 경영 출신</div></div>
+          </div>
+        </div>
+      </div>
+    </article>
+    <div class="page-no">07</div>
+  </section>
+
+  <section class="page fixed">
+    <div class="section-head">
+      <div><div class="eyebrow">Venue</div><h2>오시는 길</h2></div>
+      <div class="num">08</div>
+    </div>
+    <div class="map-row">
+      <div class="venue-copy">
+        <h3>숙명여자대학교 눈꽃광장홀</h3>
+        <p style="margin-top:2mm;color:var(--brass);font-weight:700">서울특별시 용산구 청파로47길 100</p>
+        <p style="margin-top:5mm">행사장은 숙명여자대학교 캠퍼스 내 눈꽃광장홀에서 진행됩니다. 참석자께서는 행사 당일 현장 안내 표지와 운영진의 안내에 따라 입장해주시기 바랍니다.</p>
+        <ul>
+          <li>4호선 숙대입구역 10번 출구 (도보 12분)</li>
+          <li>1호선 남영역 1번 출구 (도보 17분)</li>
+          <li>6호선 효창공원앞역 2번 출구 (도보 15분)</li>
+        </ul>
+      </div>
+      <figure class="map">
+        <img src="assets/venue-map.png" alt="숙명여자대학교 눈꽃광장홀 오시는 길 지도">
+      </figure>
+    </div>
+    <div class="page-no">08</div>
+  </section>
+
+  <section class="page fixed navy sponsor-page">
+    <svg class="strata" preserveAspectRatio="none" viewBox="0 0 1440 600" aria-hidden="true">
+      <g stroke="rgba(236,231,220,0.10)" stroke-width="1" fill="none">
+        <path d="M0,150 L820,150 L860,138 L1440,138"></path>
+        <path d="M0,250 L760,250 L800,266 L1440,266"></path>
+        <path d="M0,360 L900,360 L940,344 L1440,344"></path>
+        <path d="M0,470 L680,470 L720,488 L1440,488"></path>
+      </g>
+    </svg>
+    <div class="sponsor-wall">
+      <div class="eyebrow">Sponsorship</div>
+      <h2><span>후원 및 협력 기관</span><span>VAN과 함께하는 파트너</span></h2>
+      <div class="sponsor-grid-print">
+        <div class="sponsor-logo-print"><div class="role">주최/주관</div><div class="name long">서울권 대학 학회·학술 총연합체 VAN</div></div>
+        <div class="sponsor-logo-print"><div class="role">협력주관</div><div class="name long">서울권 대학 학회·학술 총연합체 VAN</div></div>
+        <div class="sponsor-logo-print"><div class="role">대표 후원/협력기관</div><div class="name">연세대학교</div></div>
+        <div class="sponsor-logo-print"><div class="role">대표 후원/협력기관</div><div class="name en">Maxwell Leadership Institute</div></div>
+        <div class="sponsor-logo-print"><div class="role">후원/협력기관</div><div class="name en">Maxwell Leadership Institute</div></div>
+        <div class="sponsor-logo-print"><div class="role">후원/협력기관</div><div class="name">한국지뢰제거연구소</div></div>
+        <div class="sponsor-logo-print"><div class="role">후원/협력기관</div><div class="name en">POLLITE</div></div>
+        <div class="sponsor-logo-print"><div class="role">후원/협력기관</div><div class="name">비스타컴</div></div>
+      </div>
+    </div>
+    <div class="page-no">09</div>
+  </section>
+
+  <section class="page fixed navy">
+    <svg class="strata" preserveAspectRatio="none" viewBox="0 0 1440 600" aria-hidden="true">
+      <g stroke="rgba(236,231,220,0.10)" stroke-width="1" fill="none">
+        <path d="M0,150 L820,150 L860,138 L1440,138"></path>
+        <path d="M0,250 L760,250 L800,266 L1440,266"></path>
+        <path d="M0,360 L900,360 L940,344 L1440,344"></path>
+        <path d="M0,470 L680,470 L720,488 L1440,488"></path>
+      </g>
+    </svg>
+    <div class="end-mark">
+      <img class="end-logo" src="assets/van-thumbnail.png" alt="VAN Veritas Academiae Nexus">
+      <div class="line"></div>
+      <p style="margin-top:3mm">The Arena of Innovation · 2026</p>
+    </div>
+    <div class="page-no">10</div>
+  </section>
+  <script src="src/data/eventContent.js"></script>
+  <script src="src/data/renderEventContent.js"></script>
+</body>
+</html>
