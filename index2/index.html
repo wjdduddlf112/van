@@ -307,6 +307,7 @@
   }
   .prelude .label{font-weight:700;color:var(--ink);}
   .prelude .note{margin-top:6px;}
+  .prelude .confirmed-guests{margin-top:8px;font-size:13.5px;line-height:1.65;color:var(--ink);}
 
   .session{
     background:var(--canvas);
@@ -552,6 +553,9 @@
   .map-fallback{display:none;padding:22px;text-align:center;color:var(--graphite);
     background:var(--cloud);border:1px solid var(--hairline);border-radius:var(--r-xl);font-size:14px;}
   .map-open{margin-top:14px;max-width:280px;}
+  .session-map{margin-top:14px;margin-bottom:0;}
+  .session-map .map-canvas{height:180px;border-radius:var(--r-lg);}
+  .session-map .map-open{margin-top:10px;max-width:220px;padding:11px 16px;font-size:13.5px;}
   .route-box{background:var(--canvas);border:1px solid var(--hairline);border-radius:var(--r-xl);
     padding:24px 26px;margin-bottom:26px;
     box-shadow:0 1px 2px rgba(0,0,0,.03),0 4px 16px rgba(0,0,0,.04);}
@@ -708,8 +712,8 @@
   <section class="glance">
     <div class="glance-grid">
       <div class="stat"><div class="k">일시</div><div class="v">9월 12일<span class="s">2026년 (토)</span></div></div>
-      <div class="stat"><div class="k">시간</div><div class="v">14:00–18:00<span class="s">4시간 · 본행사 직후 네트워킹 나잇 진행</span></div></div>
-      <div class="stat"><div class="k">규모</div><div class="v">수백여 명<span class="s">서울권 대학생 및 청년</span></div></div>
+      <div class="stat"><div class="k">시간</div><div class="v">14:00–19:00<span class="s">본행사 · 이후 네트워킹 나잇 진행</span></div></div>
+      <div class="stat"><div class="k">규모</div><div class="v">약 800명<span class="s">서울권 대학생 및 청년</span></div></div>
       <div class="stat"><div class="k">구성</div><div class="v">4개 세션<span class="s">기술 · 사회정치 · 디스커션 · 네트워킹</span></div></div>
     </div>
   </section>
@@ -718,9 +722,9 @@
   <section class="meta">
     <div class="meta-grid">
       <div class="meta-row"><div class="meta-key">작성자</div><div class="meta-val">VAN 컨퍼런스 준비위원회 부총괄 유수경</div></div>
-      <div class="meta-row"><div class="meta-key">일시</div><div class="meta-val nowrap"><strong>2026년 9월 12일(토) 14:00–18:00 (4시간) 예정</strong>, 직후 네트워킹 나잇 (Networking Night) 진행</div></div>
+      <div class="meta-row"><div class="meta-key">일시</div><div class="meta-val nowrap"><strong>2026년 9월 12일(토) 14:00–19:00 예정</strong>, 이후 네트워킹 나잇 (Networking Night) 진행</div></div>
       <div class="meta-row"><div class="meta-key">장소</div><div class="meta-val">숙명여자대학교 눈꽃광장홀</div></div>
-      <div class="meta-row"><div class="meta-key">인원</div><div class="meta-val">서울권 대학생 및 청년 수백여 명</div></div>
+      <div class="meta-row"><div class="meta-key">인원</div><div class="meta-val">예상 인원 서울권 대학생 및 청년 약 800명</div></div>
       <div class="meta-row"><div class="meta-key">주최 / 주관</div><div class="meta-val"><span class="lead">서울대·연세대·고려대 기반 "서울권 대학 학회·학술 총연합체" VAN</span></div></div>
       <div class="meta-row"><div class="meta-key">대표 후원</div><div class="meta-val">연세대학교, Maxwell Leadership Institute</div></div>
     </div>
@@ -734,19 +738,20 @@
         <tr><th>시간</th><th>내용</th></tr>
       </thead>
       <tbody>
-        <tr><td class="time">13:30–14:00</td><td class="content">부스 운영 및 입장ㅣ도서·포토·팝업·후원 부스</td></tr>
-        <tr><td class="time">14:00–14:40</td><td class="content">개회 및 공식 순서ㅣ소개, 축사, 사진 촬영</td></tr>
-        <tr><td class="time">14:40–15:50</td><td class="content"><b>Session 1. 기술혁신</b> (AI·양자·국방·첨단산업 전문가)</td></tr>
-        <tr><td class="time">15:50–16:00</td><td class="content">휴식</td></tr>
-        <tr><td class="time">16:00–17:20</td><td class="content"><b>Session 2. 사회·정치혁신</b> (현역 국회의원 4인)</td></tr>
-        <tr><td class="time">17:20–17:50</td><td class="content"><b>Session 3. 종합 디스커션</b></td></tr>
-        <tr><td class="time">17:50–18:00</td><td class="content">마무리 멘트 및 네트워킹 장소 이동 안내</td></tr>
-        <tr><td class="time">18:00–</td><td class="content"><b>Session 4. 알럼나이와 함께하는 네트워킹 나잇</b></td></tr>
+        <tr><td class="time">13:30–14:00</td><td class="content">부스 운영 및 참가자 입장</td></tr>
+        <tr><td class="time">14:00–15:00</td><td class="content">세션 0. 행사 및 단체소개, 축사, 내빈 소개, 단체 사진 촬영</td></tr>
+        <tr><td class="time">15:00–16:35</td><td class="content"><b>Session 1. 기술혁신</b> — 현재에서 미래를 묻다</td></tr>
+        <tr><td class="time">16:35–16:50</td><td class="content">휴식 및 럭키드로우 추첨</td></tr>
+        <tr><td class="time">16:50–18:30</td><td class="content"><b>Session 2. 사회·정치혁신</b> (현역 국회의원 4인)</td></tr>
+        <tr><td class="time">18:30–18:55</td><td class="content"><b>Session 3. 종합 디스커션</b></td></tr>
+        <tr><td class="time">18:55–19:05</td><td class="content">마무리</td></tr>
+        <tr><td class="time">19:30–</td><td class="content"><b>Session 4. 알럼나이와 함께하는 네트워킹 나잇</b></td></tr>
       </tbody>
     </table>
     <div class="prelude">
       <div class="label">축사 및 내빈ㅣ문시연 숙명여자대학교 총장 축사 예정</div>
-      <div class="note">*주한영국대사, 오만대사 참석 의사 표명, 일정 조율 중</div>
+      <div class="confirmed-guests">주한 케냐대사 참석 확정 · 주한 오만 대사관 소속 2등 서기관 참석 확정 · 선승주: 에코그린유니온 사무총장, 한국저영향개발협회 전문위원</div>
+      <div class="note">*주한 영국대사 참석 의사 표명, 현재 최종 일정 조율 중</div>
     </div>
   </section>
 
@@ -757,11 +762,11 @@
     <!-- Session 1 -->
     <article class="session">
       <span class="tag">Session 1. 기술혁신</span>
-      <h3>현재에서 미래를 묻다 <span class="divider">ㅣ</span> 2026 대한민국 기술전략회의</h3>
+      <h3>현재에서 미래를 묻다 <span class="divider">ㅣ</span> 2050 대한민국 기술전략회의</h3>
       <dl class="facts">
-        <dt>형식</dt><dd>토크콘서트 형식의 토의 세션</dd>
-        <dt>시간</dt><dd>약 1시간 10분 예정</dd>
-        <dt>연사</dt><dd>AI·양자·국방·첨단산업 전문가</dd>
+        <dt>형식</dt><dd>전문가 공통 질문 연설, 비교 토론, 청중 참여형 국가전략기술 투자 포트폴리오</dd>
+        <dt>시간</dt><dd>약 95분 예정</dd>
+        <dt>참여 분야</dt><dd>인공지능, 양자기술, 국방기술, 첨단 산업, 기술정책</dd>
       </dl>
       <div class="roster-label">현재 확정 연사</div>
       <ul class="roster">
@@ -770,6 +775,7 @@
         <li><span class="dot"></span><span class="name">김진홍</span><span class="desc">전 공군 방공유도탄사령관 · 국방융복합기술연구소 부소장</span></li>
         <li><span class="dot"></span><span class="name">임영일</span><span class="desc">국방기술진흥연구소 초대 소장 · 국방기술 기획 전문가</span></li>
         <li><span class="dot"></span><span class="name">김성혁</span><span class="desc">LG전자 상무 · 한국양자산업협회 회장</span></li>
+        <li><span class="dot"></span><span class="name">김영심</span><span class="desc">IQM Korea 지사장, 전 주한핀란드대사관·Business Finland Senior Advisor</span></li>
       </ul>
     </article>
 
@@ -779,7 +785,7 @@
       <h3>미래에서 현재를 답하다 <span class="divider">ㅣ</span> 2050 대한민국 미래 대선</h3>
       <dl class="facts">
         <dt>형식</dt><dd>토크콘서트 형식의 토론 세션</dd>
-        <dt>시간</dt><dd>약 1시간 20분-30분 예정</dd>
+        <dt>시간</dt><dd>약 100분 예정</dd>
         <dt>패널</dt><dd>현역 국회의원 4인</dd>
       </dl>
       <p class="roster-note">*국회 원구성 지연에 따른 의정 일정 변동으로 참석 의원 구성은 일부 조정될 수 있습니다.</p>
@@ -791,7 +797,7 @@
       <h3>종합 디스커션</h3>
       <dl class="facts">
         <dt>형식</dt><dd>팀별 디스커션</dd>
-        <dt>시간</dt><dd>약 30분 예정</dd>
+        <dt>시간</dt><dd>약 25분 예정</dd>
         <dt>주제</dt><dd>세션 1·세션 2와 연계된 사전 지정 의제</dd>
         <dt>운영</dt><dd>본 연합체(VAN) 산하 상설연구조직 주도</dd>
       </dl>
@@ -803,20 +809,29 @@
       <h3>Networking Night with Alumni</h3>
       <dl class="facts">
         <dt>형식</dt><dd>분야별 테이블 매칭 및 네트워킹</dd>
-        <dt>운영</dt><dd>본 연합체(VAN) 컨퍼런스 준비위원회 기획TF 주도</dd>
+        <dt>장소</dt><dd>서울 서대문구 연세로7길 25 2층 보스포차</dd>
       </dl>
+      <div class="map-wrap session-map">
+        <div id="networkingMapCanvas" class="map-canvas"></div>
+        <div id="networkingMapFallback" class="map-fallback">지도를 불러오지 못했습니다.</div>
+        <a class="btn btn-outline map-open" href="https://map.naver.com/p/entry/place/13496702?c=15.00,0,0,0,dh&amp;placePath=%2Fhome%3Ffrom%3Dmap%26fromPanelNum%3D1%26additionalHeight%3D76%26timestamp%3D202608191704%26locale%3Dko%26svcName%3Dmap_pcv5" target="_blank" rel="noopener noreferrer">네이버 지도에서 열기 →</a>
+      </div>
       <div class="roster-label">현재 확정 대표 알럼나이</div>
       <ul class="roster">
         <li><span class="dot"></span><span class="name">오종훈</span><span class="desc">SK 에너지 전 대표이사 사장, SK Portfolio Mgmt. 임원</span></li>
         <li><span class="dot"></span><span class="name">이주호</span><span class="desc">Dr.G(닥터지) 전 대표</span></li>
         <li><span class="dot"></span><span class="name">양정호</span><span class="desc">성균관대학교 교육학과 교수</span></li>
         <li><span class="dot"></span><span class="name">김정선</span><span class="desc">일원법률사무소 변호사</span></li>
-        <li><span class="dot"></span><span class="name">철학투스타는 이렇게 말했다</span><span class="desc">(인문)철학 분야 최대 규모 인스타 매거진 대표 (최근 90일 누적 조회수 약 1,680만)</span></li>
+        <li><span class="dot"></span><span class="name">철학투스타는 이렇게 말했다</span><span class="desc">인문/철학 분야 최대 규모, 누적 1680만 조회수의 인스타 매거진 대표</span></li>
         <li><span class="dot"></span><span class="name">이주형</span><span class="desc">국무조정실 전문위원, 법무부 자문위원, 뉴스통신사 기획실</span></li>
         <li><span class="dot"></span><span class="name">김소희</span><span class="desc">KDI 국제개발협력센터 연구원, 전 조선비즈 기자, 전 유엔여성기구 대외협력 담당관</span></li>
         <li><span class="dot"></span><span class="name">안정훈</span><span class="desc">KPMG, Deloitte 금융전략 컨설턴트, 하나카드/케이뱅크 카드기획파트장 및 신사업PM</span></li>
         <li><span class="dot"></span><span class="name">김용승</span><span class="desc">HelloworldLabs AX 센터장, 기업 AX 컨설팅·교육 및 웹 개발</span></li>
         <li><span class="dot"></span><span class="name">조주형</span><span class="desc">닥터 마케팅 대표, 의사 전문 마케팅 업체 운영, 서울대 의대 졸업</span></li>
+        <li><span class="dot"></span><span class="name">과학쿠키 이효종</span><span class="desc">과학 유튜버, 총 조회수 8,084만 회, KAIST 문술미래전략대학원 공학 석사</span></li>
+        <li><span class="dot"></span><span class="name">어닝쓰</span><span class="desc">대표 콘텐츠 12.8만 뷰 대기업 그로스마케터·취업/마케팅 크리에이터</span></li>
+        <li><span class="dot"></span><span class="name">와플한입</span><span class="desc">대표 콘텐츠 26.7만 뷰 유럽 IT 업계 글로벌 커리어 크리에이터</span></li>
+        <li><span class="dot"></span><span class="name">최피티</span><span class="desc">누적 1,000만+ 뷰, 단일 콘텐츠 300만 뷰를 기록한 AI 크리에이터</span></li>
       </ul>
       <p class="roster-note">*이 외에도 다양한 각계 인사들이 알럼나이로 Networking with Alumni 세션에 참여합니다.</p>
     </article>
@@ -1019,6 +1034,7 @@
 <script>
 (function(){
   var VENUE={lat:37.5451,lng:126.9634,name:'숙명여자대학교 눈꽃광장홀'};
+  var NETWORKING={lat:37.5575302,lng:126.9354292,name:'보스포차',address:'서울 서대문구 연세로7길 25 2층'};
   var canvas=document.getElementById('mapCanvas');
   if(!canvas) return;
   function fallback(){var f=document.getElementById('mapFallback');if(f)f.style.display='block';canvas.style.display='none';}
@@ -1033,6 +1049,19 @@
     map.on('click',function(){map.scrollWheelZoom.enable();});
     setTimeout(function(){try{map.invalidateSize();}catch(e){}},350);
   }catch(e){fallback();return;}
+
+  function initMiniMap(){
+    var nCanvas=document.getElementById('networkingMapCanvas');
+    if(!nCanvas||typeof L==='undefined') return;
+    try{
+      var nMap=L.map('networkingMapCanvas',{scrollWheelZoom:false,dragging:false,zoomControl:false}).setView([NETWORKING.lat,NETWORKING.lng],17);
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'© OpenStreetMap'}).addTo(nMap);
+      var nPin=L.divIcon({className:'venue-pin',html:'<span></span>',iconSize:[22,22],iconAnchor:[11,11]});
+      L.marker([NETWORKING.lat,NETWORKING.lng],{icon:nPin}).addTo(nMap).bindPopup('<b>'+NETWORKING.name+'</b><br>'+NETWORKING.address);
+      setTimeout(function(){try{nMap.invalidateSize();}catch(e){}},350);
+    }catch(e){var nf=document.getElementById('networkingMapFallback');if(nf)nf.style.display='block';nCanvas.style.display='none';}
+  }
+  initMiniMap();
 
   var btn=document.getElementById('routeBtn'),
       input=document.getElementById('originInput'),
