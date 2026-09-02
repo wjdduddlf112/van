@@ -126,7 +126,6 @@ window.eventContent = {
       alumniSummary: "대표 알럼나이 2인",
       description: "정계·산업계·학계·공공 영역의 연사와 알럼나이, 참가자가 관심 분야별 테이블에서 직접 교류하는 네트워킹 프로그램입니다. 청년들이 선배 세대와 연결되고 향후 학문·정책·산업·공공 영역에서의 실질적인 협력 가능성을 모색합니다.",
       alumni: [
-        { name: "이주호", tag: "Beauty", lead: "Dr.G 대표", detail: "연세대학교 경영학과 출신" },
         { name: "오종훈", tag: "Energy", lead: "전 SK에너지 대표이사 사장", detail: "연세대학교 법학과 출신" }
       ]
     }
