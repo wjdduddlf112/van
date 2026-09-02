@@ -57,7 +57,7 @@ window.eventContent = {
   schedule: [
     { time: "13:30–14:00", printTime: "13:30-14:00", title: "부스 운영 및 참가자 입장", detail: "도서 · 포토 · 팝업 · 후원 부스" },
     { time: "14:00–14:40", printTime: "14:00-14:40", title: "개회 및 공식 순서·축사·기념 촬영", detail: "문시연 총장 축사 예정 · 주요 내빈 참석 및 일정 조율" },
-    { time: "14:40–15:50", printTime: "14:40-15:50", tag: "Session 1", title: "기술혁신", detail: "2026 대한민국 기술전략회의", key: true },
+    { time: "14:40–15:50", printTime: "14:40-15:50", tag: "Session 1", title: "기술혁신", detail: "2026 대한민국 미래 재건", key: true },
     { time: "15:50–16:00", printTime: "15:50-16:00", title: "휴식" },
     { time: "16:00–17:20", printTime: "16:00-17:20", tag: "Session 2", title: "사회·정치혁신", detail: "2050 대한민국 미래대선", key: true },
     { time: "17:20–17:50", printTime: "17:20-17:50", tag: "Session 3", title: "종합 디스커션", key: true },
@@ -70,12 +70,12 @@ window.eventContent = {
       number: "01",
       title: "기술혁신",
       label: "Session 1. 기술혁신",
-      subtitle: "현재에서 미래를 묻다 · 2026 대한민국 기술전략회의",
+      subtitle: "현재에서 미래를 묻다 · 2026 대한민국 미래 재건",
       format: "토크콘서트 형식의 토의 세션",
       time: "약 1시간 10분 예정",
       participantLabel: "Speakers",
       participantSummary: "AI·양자·국방·첨단산업 전문가",
-      description: "AI·양자·국방·첨단산업 분야 전문가들이 대한민국 기술혁신의 현재와 향후 10년의 방향을 비교합니다. 기술 변화와 산업 경쟁력, 정책·제도, 인재양성의 과제를 살펴보고, 국가전략기술 투자 패키지 100조 원을 가정해 미래 투자 우선순위를 함께 구성합니다.",
+      description: "AI·양자·국방·첨단산업 분야 전문가들이 대한민국의 미래 재건을 위한 기술혁신의 방향을 논의합니다. 기술 변화와 산업 경쟁력, 정책·제도, 인재양성의 과제를 살펴보고, 국가전략기술 투자 우선순위를 함께 구성합니다.",
       speakers: [
         { name: "Kenneth Maxwell Nance", tag: "Keynote", lead: "하버드대학교 박사 · 미국 인트라넷 창시자", detail: "미국 대통령상 4회 수상. 기술 정책과 디지털 인프라의 발전 경험을 바탕으로 혁신의 방향을 논의합니다." },
         { name: "김성혁", tag: "Industry", lead: "LG전자 상무 · 한국양자산업협회 회장", detail: "양자와 첨단산업 현장에서 구현되는 기술혁신의 방향을 논의합니다." },
