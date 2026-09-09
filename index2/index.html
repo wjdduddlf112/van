@@ -306,8 +306,14 @@
     font-size:15px;
   }
   .prelude .label{font-weight:700;color:var(--ink);}
-  .prelude .note{margin-top:6px;}
-  .prelude .confirmed-guests{margin-top:8px;font-size:13.5px;line-height:1.65;color:var(--ink);}`r`n
+  .prelude-heading{font-size:15px;color:var(--ink);margin-bottom:8px;}
+  .prelude-heading strong{font-weight:700;}
+  .prelude-subheading{margin-top:18px;padding-top:16px;border-top:1px solid var(--hairline);font-weight:700;color:var(--primary-deep);}
+  .prelude-list{margin:8px 0 0;padding:0;list-style:none;}
+  .prelude-row{display:grid;grid-template-columns:minmax(150px,190px) 1fr;gap:14px;align-items:start;padding:10px 0;border-bottom:1px solid var(--hairline);}
+  .prelude-row:last-child{border-bottom:0;}
+  .prelude-name{font-weight:700;color:var(--ink);}
+  .prelude-desc{color:var(--muted);line-height:1.55;}
   .session{
     background:var(--canvas);
     border:1px solid var(--hairline);
@@ -437,6 +443,7 @@
     .masthead .frame.br{right:16px;bottom:16px;}
     .meta,.band,.footer{padding-left:24px;padding-right:24px;}
     .apply-grid{grid-template-columns:1fr;}
+    .prelude-row{grid-template-columns:1fr;gap:4px;padding:9px 0;}
     .map-canvas{height:300px;}
     .dir-item{grid-template-columns:1fr;gap:4px;}
     .route-btn{width:100%;}
@@ -748,24 +755,24 @@
       </tbody>
     </table>
     <div class="prelude">
-      <div class="label">축사 및 주요 내빈</div>
-      <ul class="roster">
-        <li><span class="dot"></span><span class="name">김유성</span><span class="desc"></span></li>
-        <li><span class="dot"></span><span class="name">곽상언</span><span class="desc"></span></li>
-        <li><span class="dot"></span><span class="name">Miriam Možgan</span><span class="desc"></span></li>
-        <li><span class="dot"></span><span class="name">Emmy Jerono KIPSOI</span><span class="desc"></span></li>
-        <li><span class="dot"></span><span class="name">Alpha Ibrahima Thiam</span><span class="desc"></span></li>
-        <li><span class="dot"></span><span class="name">Ms. Manduli Katugampola</span><span class="desc"></span></li>
+      <div class="prelude-heading"><strong>축사</strong></div>
+      <ul class="prelude-list">
+        <li class="prelude-row"><span class="prelude-name">김유성</span><span class="prelude-desc">연세대학교 법학전문대학원 교수</span></li>
+        <li class="prelude-row"><span class="prelude-name">곽상언</span><span class="prelude-desc">제22대 국회의원 · 서울 종로구</span></li>
+        <li class="prelude-row"><span class="prelude-name">Miriam Možgan</span><span class="prelude-desc">주한 슬로베니아 대사</span></li>
+        <li class="prelude-row"><span class="prelude-name">Emmy Jerono KIPSOI</span><span class="prelude-desc">주한 케냐 대사</span></li>
+        <li class="prelude-row"><span class="prelude-name">Alpha Ibrahima Thiam</span><span class="prelude-desc">주한 모리타니아 대사대리</span></li>
+        <li class="prelude-row"><span class="prelude-name">Ms. Manduli Katugampola</span><span class="prelude-desc">스리랑카 외교부 외교관</span></li>
       </ul>
-      <div class="note">*영상 축사 참여</div>
-      <ul class="roster">
-        <li><span class="dot"></span><span class="name">문시연</span><span class="desc"></span></li>
-        <li><span class="dot"></span><span class="name">권영세</span><span class="desc"></span></li>
-        <li><span class="dot"></span><span class="name">안철수</span><span class="desc"></span></li>
-        <li><span class="dot"></span><span class="name">김은혜</span><span class="desc"></span></li>
-        <li><span class="dot"></span><span class="name">박충권</span><span class="desc"></span></li>
-        <li><span class="dot"></span><span class="name">주호영</span><span class="desc"></span></li>
-        <li><span class="dot"></span><span class="name">이준석</span><span class="desc"></span></li>
+      <div class="prelude-subheading">영상 축사</div>
+      <ul class="prelude-list">
+        <li class="prelude-row"><span class="prelude-name">문시연</span><span class="prelude-desc">숙명여자대학교 총장</span></li>
+        <li class="prelude-row"><span class="prelude-name">권영세</span><span class="prelude-desc">제22대 국회의원 · 전 통일부 장관</span></li>
+        <li class="prelude-row"><span class="prelude-name">안철수</span><span class="prelude-desc">제22대 국회의원 · 경기 성남시 분당구갑</span></li>
+        <li class="prelude-row"><span class="prelude-name">김은혜</span><span class="prelude-desc">제22대 국회의원 · 전 대통령실 홍보수석</span></li>
+        <li class="prelude-row"><span class="prelude-name">박충권</span><span class="prelude-desc">제22대 국회의원 · 탈북민·과학기술인 출신</span></li>
+        <li class="prelude-row"><span class="prelude-name">주호영</span><span class="prelude-desc">제22대 국회의원 · 한일의원연맹 회장</span></li>
+        <li class="prelude-row"><span class="prelude-name">이준석</span><span class="prelude-desc">제22대 국회의원 · 경기 화성시을</span></li>
       </ul>
     </div>
 </section>
