@@ -77,7 +77,6 @@ window.eventContent = {
       speakers: [
         { name: "Kenneth Maxwell Nance", tag: "Keynote", lead: "하버드대학교 박사 · 미국 인트라넷 창시자", detail: "미국 대통령상 4회 수상. 기술 정책과 디지털 인프라의 발전 경험을 바탕으로 혁신의 방향을 논의합니다." },
         { name: "김성혁", tag: "Industry", lead: "LG전자 상무 · 한국양자산업협회 회장", detail: "양자와 첨단산업 현장에서 구현되는 기술혁신의 방향을 논의합니다." },
-        { name: "김종국", tag: "Academia", lead: "현 고려대학교 전기전자공학부 교수", detail: "전 삼성SDS IT R&D Center 책임연구원" },
         { name: "임영일", tag: "Defense", lead: "국방기술진흥연구소 초대 소장", detail: "국방기술 기획 및 방위산업 육성 경험을 바탕으로 미래 안보 환경의 변화를 논의합니다." },
         { name: "김진홍", tag: "Defense", lead: "전 공군 방공유도탄사령관", detail: "국방융복합기술연구소 부소장. 기술혁신과 안보의 접점을 논의합니다." },
         { name: "이광희", tag: "Industry", lead: "VIV Tech CTO", detail: "전 Boeing Korea AI Tech Lead · 전 인공지능연구원 Image Generation Team Lead" }
@@ -254,6 +253,6 @@ window.eventContent = {
   },
 
   status: {
-    guests: "축사 및 주요 내빈·알럼나이를 한 묶음으로 안내"
+    guests: "김유성, 곽상언, Miriam Možgan, Emmy Jerono KIPSOI, Alpha Ibrahima Thiam, Ms. Manduli Katugampola / 영상축사: 문시연, 권영세, 안철수, 김은혜, 박충권, 주호영"
   }
 };
