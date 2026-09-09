@@ -116,8 +116,8 @@ window.eventContent = {
       displayTitle: "알럼나이와 함께하는 네트워킹 나잇",
       format: "분야별 테이블 네트워킹",
       host: "VAN 교류진흥부 주도",
-      participants: "연사 · 내빈 · 알럼나이 · 참가자",
-      alumniSummary: "대표 알럼나이 2인",
+      participants: "축사 · 주요 내빈 · 알럼나이 · 참가자",
+      alumniSummary: "축사 및 주요 내빈·알럼나이",
       description: "정계·산업계·학계·공공 영역의 연사와 알럼나이, 참가자가 관심 분야별 테이블에서 직접 교류하는 네트워킹 프로그램입니다. 청년들이 선배 세대와 연결되고 향후 학문·정책·산업·공공 영역에서의 실질적인 협력 가능성을 모색합니다.",
       alumni: [
         { name: "오종훈", tag: "Energy", lead: "전 SK에너지 대표이사 사장", detail: "전 SK Portfolio Management 임원" }
@@ -254,6 +254,6 @@ window.eventContent = {
   },
 
   status: {
-    guests: "곽상언 국회의원 현장 축사 예정, 문시연 숙명여자대학교 총장 영상축사 참여, 케냐대사·오만대사관 2등서기관·모리타니아 대사대리·스리랑카 대사·슬로베니아 대사 참석 및 축사 예정"
+    guests: "축사 및 주요 내빈·알럼나이를 한 묶음으로 안내"
   }
 };
