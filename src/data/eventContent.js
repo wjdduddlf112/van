@@ -7,20 +7,20 @@ window.eventContent = {
     titleSuffix: "을 묻다",
     englishTitle: "The Arena of Innovation",
     meta: "2026 Conference<br>Seoul",
-    host: "서울권 대학 학회·학술 총연합체 VAN",
-    hostPrefix: "서울권 대학 학회·학술 총연합체",
+    host: "한국대학 학회·학술 총연합체 VAN",
+    hostPrefix: "한국대학 학회·학술 총연합체",
     date: "2026. 09. 12.",
     dateText: "2026년 9월 12일 토요일",
-    dayTime: "토요일 14:00–18:00 (4h)",
-    printDayTime: "토요일 14:00-18:00",
-    time: "14:00–18:00",
+    dayTime: "토요일 14:00–19:00",
+    printDayTime: "토요일 14:00-19:00",
+    time: "14:00–19:00",
     venue: "숙명여자대학교",
     venueDetail: "눈꽃광장홀",
     venueFull: "숙명여자대학교 눈꽃광장홀",
     address: "서울특별시 용산구 청파로47길 100",
-    audience: "수백 명 규모",
+    audience: "1000명 이상",
     audienceDetail: "전국 대학생 및 청년",
-    audienceFull: "전국 대학생 및 청년 수백 명",
+    audienceFull: "전국 대학생 및 청년 1000명 이상",
     fee: "본행사 무료",
     after: "Networking Night",
     afterDetail: "알럼나이 네트워킹 나잇",
@@ -28,16 +28,16 @@ window.eventContent = {
   },
 
   heroFacts: [
-    { label: "Date", value: "2026. 09. 12.", detail: "토요일 14:00–18:00 (4h)", printDetail: "토요일 14:00-18:00" },
+    { label: "Date", value: "2026. 09. 12.", detail: "토요일 14:00–19:00", printDetail: "토요일 14:00-19:00" },
     { label: "Venue", value: "숙명여자대학교", detail: "눈꽃광장홀" },
-    { label: "Audience", value: "수백 명 규모", detail: "전국 대학생 및 청년" },
+    { label: "Audience", value: "1000명 이상", detail: "전국 대학생 및 청년" },
     { label: "After", value: "Networking Night", detail: "알럼나이 네트워킹 나잇" }
   ],
 
   overview: {
-    ledeBefore: "서울대학교·연세대학교·고려대학교를 중심으로 서울권 대학의 학회·학술조직이 연대한 VAN이",
+    ledeBefore: "한국대학의 학회·학술조직이 연대한 VAN이",
     ledeAfter: "를 개최합니다.",
-    body: "기술패권 경쟁과 산업구조의 전환, 정치·사회 시스템의 재설계라는 시대적 과제를 중심으로 정계·산업계·학계와 청년 세대가 함께 대한민국의 미래 전략을 논의합니다. 2026년 9월 12일 토요일, 숙명여자대학교 눈꽃광장홀에서 전국 대학생 및 청년 수백 명 규모로 진행됩니다.",
+    body: "기술패권 경쟁과 산업구조의 전환, 정치·사회 시스템의 재설계라는 시대적 과제를 중심으로 정계·산업계·학계와 청년 세대가 함께 대한민국의 미래 전략을 논의합니다. 2026년 9월 12일 토요일, 숙명여자대학교 눈꽃광장홀에서 전국 대학생 및 청년 1000명 이상 규모로 진행됩니다.",
     pillars: [
       { number: "S1", title: "기술혁신", description: "AI·양자·국방·첨단산업 전략" },
       { number: "S2", title: "사회·정치혁신", description: "현역 국회의원 정책 토론" },
@@ -53,16 +53,15 @@ window.eventContent = {
   ],
 
   schedule: [
-    { time: "13:30–14:00", printTime: "13:30-14:00", title: "부스 운영 및 참가자 입장", detail: "도서 · 포토 · 팝업 · 후원 부스" },
-    { time: "14:00–14:40", printTime: "14:00-14:40", title: "개회 및 공식 순서·축사·기념 촬영", detail: "문시연 총장 축사 예정 · 주요 내빈 참석 및 일정 조율" },
-    { time: "14:40–15:50", printTime: "14:40-15:50", tag: "Session 1", title: "기술혁신", detail: "2026 대한민국 미래 재건", key: true },
-    { time: "15:50–16:00", printTime: "15:50-16:00", title: "휴식" },
-    { time: "16:00–17:20", printTime: "16:00-17:20", tag: "Session 2", title: "사회·정치혁신", detail: "2050 대한민국 미래대선", key: true },
-    { time: "17:20–17:50", printTime: "17:20-17:50", tag: "Session 3", title: "종합 디스커션", key: true },
-    { time: "17:50–18:00", printTime: "17:50-18:00", title: "폐회 및 네트워킹 장소 이동 안내" },
-    { time: "18:30–", printTime: "18:30-", tag: "Session 4", title: "Networking Night with Alumni", key: true }
+    { time: "13:30–14:00", printTime: "13:30-14:00", title: "부스 운영 및 참가자 입장" },
+    { time: "14:00–14:50", printTime: "14:00-14:50", title: "세션 0. 행사 및 단체 소개, 축사, 내빈 소개, 단체 사진 촬영" },
+    { time: "14:50–16:25", printTime: "14:50-16:25", tag: "Session 1", title: "기술혁신", key: true },
+    { time: "16:25–16:40", printTime: "16:25-16:40", title: "휴식 및 럭키드로우 추첨" },
+    { time: "16:40–18:20", printTime: "16:40-18:20", tag: "Session 2", title: "사회·정치혁신", key: true },
+    { time: "18:20–18:45", printTime: "18:20-18:45", tag: "Session 3", title: "종합 디스커션", key: true },
+    { time: "18:45–18:55", printTime: "18:45-18:55", title: "마무리" },
+    { time: "19:30–", printTime: "19:30-", tag: "Session 4", title: "Networking Night with Alumni", key: true }
   ],
-
   sessions: {
     technology: {
       number: "01",
@@ -75,11 +74,11 @@ window.eventContent = {
       participantSummary: "AI·양자·국방·첨단산업 전문가",
       description: "AI·양자·국방·첨단산업 분야 전문가들이 대한민국의 미래 재건을 위한 기술혁신의 방향을 논의합니다. 기술 변화와 산업 경쟁력, 정책·제도, 인재양성의 과제를 살펴보고, 국가전략기술 투자 우선순위를 함께 구성합니다.",
       speakers: [
-        { name: "Kenneth Maxwell Nance", tag: "Keynote", lead: "미군 인트라넷 개편 총괄", detail: "해당 공로로 세계 유일 미국 대통령상 4회 수상, Amazon 선정 세계 50대 리더" },
-        { name: "이광희", tag: "Industry", lead: "VIV Tech CTO", detail: "전 Boeing Korea AI Tech Lead" },
-        { name: "김진홍", tag: "Defense", lead: "전 공군 방공유도탄사령관", detail: "국방융복합기술연구소 부소장" },
-        { name: "임영일", tag: "Defense", lead: "국방기술진흥연구소 초대 소장", detail: "국방기술 기획 전문가" },
-        { name: "김성혁", tag: "Industry", lead: "LG전자 상무", detail: "한국양자산업협회 회장" }
+        { name: "Kenneth Maxwell Nance", tag: "Keynote", lead: "미군 인트라넷 개편 총괄, 미국 대통령상 4회 수상, Amazon 선정 세계 50대 리더, Maxwell Leadership Institute 리더십 교육자", detail: "" },
+        { name: "이광희", tag: "Industry", lead: "VIV Tech CTO, 전 Boeing Korea AI Tech Lead, 전 인공지능연구원 Image Generation Team Lead", detail: "" },
+        { name: "김진홍", tag: "Defense", lead: "전 공군 방공유도탄사령관, 국방융복합기술연구소 부소장, 방공유도탄·국방기술 전문가", detail: "" },
+        { name: "임영일", tag: "Defense", lead: "국방기술진흥연구소 초대 소장, 국방기술 기획·방위산업 육성 및 미래 안보 전략 전문가", detail: "" },
+        { name: "김성혁", tag: "Industry", lead: "LG전자 상무, 한국양자산업협회 회장, 양자기술·첨단산업 전략 분야 전문가", detail: "" }
       ]
     },
 
@@ -96,9 +95,9 @@ window.eventContent = {
       disclaimer: "본 프로그램은 실제 선거나 특정 정당에 대한 지지를 목적으로 하지 않는 비정파적·학술적 가상 정책 토론입니다.",
       speakerNote: "* 국회 원구성 지연 및 의정 일정 변동에 따라 참여 국회의원은 변경될 수 있습니다.",
       speakers: [
-        { name: "손솔", tag: "Speaker", lead: "제22대 국회의원 · 비례대표", detail: "사회·정치혁신 토론 세션" },
-        { name: "김동아", tag: "Speaker", lead: "제22대 국회의원 · 서울 서대문구갑", detail: "사회·정치혁신 토론 세션" },
-        { name: "조정훈", tag: "Speaker", lead: "제22대 국회의원 · 서울 마포구갑", detail: "사회·정치혁신 토론 세션" }
+        { name: "김동아", tag: "Speaker", lead: "제22대 국회의원 · 서울 서대문구갑, 국회 입법·정책 현장에서 청년·사회혁신 의제 수행", detail: "" },
+        { name: "조정훈", tag: "Speaker", lead: "제22대 국회의원 · 서울 마포구갑, 전 시대전환 대표, 경제·정치개혁 및 미래정책 분야 활동", detail: "" },
+        { name: "손솔", tag: "Speaker", lead: "제22대 국회의원 · 비례대표, 청년 정치·노동·민생 의제 중심의 사회혁신 활동", detail: "" }
       ],
       agenda: ["생존 역량", "외교·안보 전략", "산업 전환", "교육·인재 혁신", "복지와 사회보장", "인구·이민 대응", "정치개혁", "사회적 신뢰 회복"]
     },
@@ -122,7 +121,39 @@ window.eventContent = {
       alumniSummary: "주요 내빈·알럼나이",
       description: "정계·산업계·학계·공공 영역의 연사와 알럼나이, 참가자가 관심 분야별 테이블에서 직접 교류하는 네트워킹 프로그램입니다. 청년들이 선배 세대와 연결되고 향후 학문·정책·산업·공공 영역에서의 실질적인 협력 가능성을 모색합니다.",
       alumni: [
-        { name: "오종훈", tag: "Energy", lead: "전 SK에너지 대표이사 사장", detail: "전 SK Portfolio Management 임원" }
+        { name: "김종혁", tag: "Guest", lead: "국민의힘 고양병 당협위원장, 전 국민의힘 최고위원, 전 중앙일보 편집국장", detail: "" },
+        { name: "유지훈", tag: "Guest", lead: "제9대 서울특별시 광진구의회 의원, 지역 의정 및 생활밀착형 정책 분야 활동", detail: "" },
+        { name: "김경주", tag: "Guest", lead: "제9대 경주시의회 의원, 문화행정위원회 소속, 지역 문화·행정 분야 의정활동", detail: "" },
+        { name: "오종훈", tag: "Guest", lead: "전 SK에너지 대표이사 사장, 전 SK㈜ Portfolio Management 5실장, BM혁신본부장 역임", detail: "" },
+        { name: "류성호", tag: "Guest", lead: "BT텔레콤 대표, 에너지 하베스팅·SMP 등 전력변환장치 생산 및 개발", detail: "" },
+        { name: "김형석", tag: "Guest", lead: "CurrentIQ CEO, AI 기반 에너지 인텔리전스·수요예측 솔루션 스타트업 창업", detail: "" },
+        { name: "이종성", tag: "Guest", lead: "국토환경뉴스 대표, 철도공학 박사, 전 서울메트로 신사업지원단장, 국내외 철도사업 전문가", detail: "" },
+        { name: "오종원", tag: "Guest", lead: "문화예술 종합 월간지 피그헤드랩 사장, 문화예술 콘텐츠 및 미디어 분야 활동", detail: "" },
+        { name: "조주형", tag: "Guest", lead: "닥터마케팅 대표, 서울대학교 의과대학 졸업, 의료·헬스케어 마케팅 및 병·의원 브랜딩 총괄", detail: "" },
+        { name: "배다정", tag: "Guest", lead: "더단단㈜ 대표, 13년차 심리전문가", detail: "" },
+        { name: "정용덕", tag: "Guest", lead: "사업가, 부동산 및 상업·주거 인프라 건설·개발 프로젝트 총괄", detail: "" },
+        { name: "김지희", tag: "Guest", lead: "현 한빛약국장, 전 삼성서울병원 원내약국 18년 근무, 임상약무 및 외래 처방조제 경력", detail: "" },
+        { name: "허재성", tag: "Guest", lead: "HD현대오일뱅크 석유화학트레이딩팀 매니저, 에너지·석유화학 트레이딩 분야 실무", detail: "" },
+        { name: "이상화", tag: "Guest", lead: "하나은행 개인금융 담당, 금융상품 및 개인금융 서비스 분야 실무", detail: "" },
+        { name: "안정훈", tag: "Guest", lead: "케이뱅크 카드기획 팀장, 전 삼정KPMG·딜로이트 안진 금융전략 컨설턴트", detail: "" },
+        { name: "김용승", tag: "Guest", lead: "HelloworldLabs AX 센터장, 삼육대학교 산업체 겸직교수, 웹·임베디드 및 AX 분야 전문가", detail: "" },
+        { name: "김유성", tag: "Guest", lead: "연세대학교 법학전문대학원 교수, 전 대법원 재판연구관, 전 서울중앙지방법원 판사", detail: "" },
+        { name: "양정호", tag: "Guest", lead: "성균관대학교 교육학과 교수, 전 사회부총리 사회정책자문위원장", detail: "" },
+        { name: "조성호", tag: "Guest", lead: "KAIST 전산학부 교수, KAIST 실패연구소장, 컴퓨터공학·연구혁신 분야 연구자", detail: "" },
+        { name: "이혜림", tag: "Guest", lead: "고려대학교 미디어학부 교수, 전 Washington University 조교수", detail: "" },
+        { name: "이정교", tag: "Guest", lead: "경희대학교 교수, 국제관계·글로벌 이슈 분야 연구 및 교육 활동", detail: "" },
+        { name: "김정선", tag: "Guest", lead: "일원법률사무소 변호사, 교육·입시 주요 소송 및 민·형사·기업 법률자문 수행", detail: "" },
+        { name: "이주형", tag: "Guest", lead: "뉴스통신사 기획실, 전 법무부 자문위원, 전 국무조정실 전문위원, AI·IT·금융 분야 활동", detail: "" },
+        { name: "김기호", tag: "Guest", lead: "한국지뢰제거연구소 소장, 지뢰·폭발물 제거 및 안전·연구 분야 전문가", detail: "" },
+        { name: "선승주", tag: "Guest", lead: "에코그린유니온 사무총장, 한국저영향개발협회 전문위원, 환경·지속가능개발 분야 활동", detail: "" },
+        { name: "홍승모", tag: "Guest", lead: "연희동발전위원회 위원장, 지역사회 발전 및 민간 협력 활동", detail: "" },
+        { name: "과학쿠키 이효종", tag: "Guest", lead: "과학 커뮤니케이터, 유튜브 구독자 약 45만 명, 누적 조회수 약 8,084만 회", detail: "" },
+        { name: "최피티", tag: "Guest", lead: "AI 프롬프트·활용 분야 크리에이터, 누적 조회수 1,000만 회 이상, 단일 콘텐츠 300만 뷰", detail: "" },
+        { name: "철학투스타는 이렇게 말했다", tag: "Guest", lead: "인스타그램 기반 철학·인문학 매거진, 최근 90일 누적 조회수 약 1,680만 회", detail: "" },
+        { name: "김도트", tag: "Guest", lead: "디지털 콘텐츠 크리에이터, 픽셀아트·디지털 일러스트·서브컬처 기반 비주얼 콘텐츠 제작", detail: "" },
+        { name: "임서현(아임서연)", tag: "Guest", lead: "라이프스타일 인플루언서, 트렌드·일상·뷰티·패션 중심 SNS 콘텐츠 제작", detail: "" },
+        { name: "언어덕후", tag: "Guest", lead: "학술·일상툰 콘텐츠 크리에이터, 약 1만 팔로워 기반 지식·언어 콘텐츠 제작", detail: "" },
+        { name: "최현준", tag: "Guest", lead: "연세대학교 법학전문대학원 재학, 고려대학교 행정학과 졸업", detail: "" }
       ]
     }
   },
@@ -138,7 +169,7 @@ window.eventContent = {
     ]
   },
 
-  participatingOrganizationsSummary: "서울대·연세대·고려대를 비롯한 서울권 및 연합 학회·학생단체 참여·협력",
+  participatingOrganizationsSummary: "한국대학 및 연합 학회·학생단체 참여·협력",
   participatingOrganizations: [
     "서울대 범죄학회",
     "서울대 모의유엔",
@@ -235,8 +266,8 @@ window.eventContent = {
   partnerOrganizations: [],
 
   supportOrganizations: [
-    { role: "주최/주관", name: "서울권 대학 학회·학술 총연합체 VAN", long: true },
-    { role: "협력주관", name: "서울권 대학 학회·학술 총연합체 VAN", long: true },
+    { role: "주최/주관", name: "한국대학 학회·학술 총연합체 VAN", long: true },
+    { role: "협력주관", name: "한국대학 학회·학술 총연합체 VAN", long: true },
     { role: "대표 후원/협력기관", name: "연세대학교" },
     { role: "대표 후원/협력기관", name: "Maxwell Leadership Institute", en: true },
     { role: "후원/협력기관", name: "Maxwell Leadership Institute", en: true },
@@ -256,6 +287,6 @@ window.eventContent = {
   },
 
   status: {
-    guests: "김유성, Miriam Možgan, Emmy Jerono KIPSOI, Alpha Ibrahima Thiam, Ms. Manduli Katugampola / 영상축사: 문시연, 권영세, 안철수, 김은혜, 박충권, 주호영, 이준석"
+    guests: "김유성, Miriam Možgan, Emmy Jerono KIPSOI, Alpha Ibrahima Thiam, Ms. Manduli Katugampola / 영상축사: 문시연, 안철수, 곽상언, 권영세, 박충권, 이준석"
   }
 };
