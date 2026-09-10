@@ -69,17 +69,17 @@ window.eventContent = {
       title: "기술혁신",
       label: "Session 1. 기술혁신",
       subtitle: "현재에서 미래를 묻다 · 2026 대한민국 미래 재건",
-      format: "토크콘서트 형식의 토의 세션",
-      time: "약 1시간 10분 예정",
+      format: "전문가 공통 질문 연설, 비교 토론, 청중 참여형 국가전략기술 투자 포트폴리오",
+      time: "약 95분 예정",
       participantLabel: "Speakers",
       participantSummary: "AI·양자·국방·첨단산업 전문가",
       description: "AI·양자·국방·첨단산업 분야 전문가들이 대한민국의 미래 재건을 위한 기술혁신의 방향을 논의합니다. 기술 변화와 산업 경쟁력, 정책·제도, 인재양성의 과제를 살펴보고, 국가전략기술 투자 우선순위를 함께 구성합니다.",
       speakers: [
-        { name: "Kenneth Maxwell Nance", tag: "Keynote", lead: "하버드대학교 박사 · 미국 인트라넷 창시자", detail: "미국 대통령상 4회 수상. 기술 정책과 디지털 인프라의 발전 경험을 바탕으로 혁신의 방향을 논의합니다." },
-        { name: "김성혁", tag: "Industry", lead: "LG전자 상무 · 한국양자산업협회 회장", detail: "양자와 첨단산업 현장에서 구현되는 기술혁신의 방향을 논의합니다." },
-        { name: "임영일", tag: "Defense", lead: "국방기술진흥연구소 초대 소장", detail: "국방기술 기획 및 방위산업 육성 경험을 바탕으로 미래 안보 환경의 변화를 논의합니다." },
-        { name: "김진홍", tag: "Defense", lead: "전 공군 방공유도탄사령관", detail: "국방융복합기술연구소 부소장. 기술혁신과 안보의 접점을 논의합니다." },
-        { name: "이광희", tag: "Industry", lead: "VIV Tech CTO", detail: "전 Boeing Korea AI Tech Lead · 전 인공지능연구원 Image Generation Team Lead" }
+        { name: "Kenneth Maxwell Nance", tag: "Keynote", lead: "미군 인트라넷 개편 총괄", detail: "해당 공로로 세계 유일 미국 대통령상 4회 수상, Amazon 선정 세계 50대 리더" },
+        { name: "이광희", tag: "Industry", lead: "VIV Tech CTO", detail: "전 Boeing Korea AI Tech Lead" },
+        { name: "김진홍", tag: "Defense", lead: "전 공군 방공유도탄사령관", detail: "국방융복합기술연구소 부소장" },
+        { name: "임영일", tag: "Defense", lead: "국방기술진흥연구소 초대 소장", detail: "국방기술 기획 전문가" },
+        { name: "김성혁", tag: "Industry", lead: "LG전자 상무", detail: "한국양자산업협회 회장" }
       ]
     },
 
@@ -89,16 +89,19 @@ window.eventContent = {
       label: "Session 2. 사회·정치혁신",
       subtitle: "미래에서 현재를 답하다 · 2050 대한민국 미래대선",
       format: "토크콘서트 형식의 토론 세션",
-      time: "약 1시간 20분 예정",
-      participantLabel: "Panel",
-      participantSummary: "여러 정당의 현역 국회의원",
+      time: "약 100분 예정",
+      participantLabel: "Speakers",
+      participantSummary: "현역 국회의원 3인",
       description: "현역 국회의원들이 ‘2050년 대한민국의 미래 지도자’라는 가상 설정 아래, 2026년 현재 대한민국이 선택해야 할 장기 국가 전략을 제시하는 정책 토론 프로그램입니다. 당장의 정치 현안이나 정당 간 공방을 넘어 생존 역량, 외교·안보, 산업 전환, 교육·인재 혁신, 복지, 인구·이민, 정치개혁과 사회적 신뢰 회복을 논의합니다.",
       disclaimer: "본 프로그램은 실제 선거나 특정 정당에 대한 지지를 목적으로 하지 않는 비정파적·학술적 가상 정책 토론입니다.",
       speakerNote: "* 국회 원구성 지연 및 의정 일정 변동에 따라 참여 국회의원은 변경될 수 있습니다.",
-      speakers: [],
+      speakers: [
+        { name: "손솔", tag: "Speaker", lead: "제22대 국회의원 · 비례대표", detail: "사회·정치혁신 토론 세션" },
+        { name: "김동아", tag: "Speaker", lead: "제22대 국회의원 · 서울 서대문구갑", detail: "사회·정치혁신 토론 세션" },
+        { name: "조정훈", tag: "Speaker", lead: "제22대 국회의원 · 서울 마포구갑", detail: "사회·정치혁신 토론 세션" }
+      ],
       agenda: ["생존 역량", "외교·안보 전략", "산업 전환", "교육·인재 혁신", "복지와 사회보장", "인구·이민 대응", "정치개혁", "사회적 신뢰 회복"]
     },
-
     discussion: {
       number: "03",
       title: "디스커션",
@@ -253,6 +256,6 @@ window.eventContent = {
   },
 
   status: {
-    guests: "김유성, 곽상언, Miriam Možgan, Emmy Jerono KIPSOI, Alpha Ibrahima Thiam, Ms. Manduli Katugampola / 영상축사: 문시연, 권영세, 안철수, 김은혜, 박충권, 주호영"
+    guests: "김유성, Miriam Možgan, Emmy Jerono KIPSOI, Alpha Ibrahima Thiam, Ms. Manduli Katugampola / 영상축사: 문시연, 권영세, 안철수, 김은혜, 박충권, 주호영, 이준석"
   }
 };
