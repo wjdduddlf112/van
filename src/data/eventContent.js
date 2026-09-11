@@ -132,7 +132,6 @@ window.eventContent = {
         { name: "조주형", tag: "Guest", lead: "닥터마케팅 대표, 서울대학교 의과대학 졸업, 의료·헬스케어 마케팅 및 병·의원 브랜딩 총괄", detail: "" },
         { name: "배다정", tag: "Guest", lead: "더단단㈜ 대표, 13년차 심리전문가", detail: "" },
         { name: "정용덕", tag: "Guest", lead: "사업가, 부동산 및 상업·주거 인프라 건설·개발 프로젝트 총괄", detail: "" },
-        { name: "김지희", tag: "Guest", lead: "현 한빛약국장, 전 삼성서울병원 원내약국 18년 근무, 임상약무 및 외래 처방조제 경력", detail: "" },
         { name: "허재성", tag: "Guest", lead: "HD현대오일뱅크 석유화학트레이딩팀 매니저, 에너지·석유화학 트레이딩 분야 실무", detail: "" },
         { name: "이상화", tag: "Guest", lead: "하나은행 개인금융 담당, 금융상품 및 개인금융 서비스 분야 실무", detail: "" },
         { name: "안정훈", tag: "Guest", lead: "케이뱅크 카드기획 팀장, 전 삼정KPMG·딜로이트 안진 금융전략 컨설턴트", detail: "" },
@@ -287,6 +286,6 @@ window.eventContent = {
   },
 
   status: {
-    guests: "김유성, Miriam Možgan, Emmy Jerono KIPSOI, Alpha Ibrahima Thiam, Ms. Manduli Katugampola / 영상축사: 문시연, 안철수, 이진숙, 곽상언, 권영세, 박충권, 이준석"
+    guests: "김유성, Miriam Možgan, Emmy Jerono KIPSOI, Alpha Ibrahima Thiam, Ms. Manduli Katugampola / 영상축사: 문시연, 안철수, 한동훈, 이진숙, 곽상언, 권영세, 박충권, 이준석"
   }
 };
