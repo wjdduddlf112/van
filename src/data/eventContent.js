@@ -147,11 +147,12 @@ window.eventContent = {
         { name: "김기호", tag: "Guest", lead: "한국지뢰제거연구소 소장, 지뢰·폭발물 제거 및 안전·연구 분야 전문가", detail: "" },
         { name: "선승주", tag: "Guest", lead: "에코그린유니온 사무총장, 한국저영향개발협회 전문위원, 환경·지속가능개발 분야 활동", detail: "" },
         { name: "홍승모", tag: "Guest", lead: "연희동발전위원회 위원장, 지역사회 발전 및 민간 협력 활동", detail: "" },
+        { name: "류상화", tag: "Guest", lead: "아나운서, 기업교육·스피치·커뮤니케이션 분야 활동", detail: "" },
         { name: "과학쿠키 이효종", tag: "Guest", lead: "과학 커뮤니케이터, 유튜브 구독자 약 45만 명, 누적 조회수 약 8,084만 회", detail: "" },
         { name: "최피티", tag: "Guest", lead: "AI 프롬프트·활용 분야 크리에이터, 누적 조회수 1,000만 회 이상, 단일 콘텐츠 300만 뷰", detail: "" },
         { name: "철학투스타는 이렇게 말했다", tag: "Guest", lead: "인스타그램 기반 철학·인문학 매거진, 최근 90일 누적 조회수 약 1,680만 회", detail: "" },
         { name: "김도트", tag: "Guest", lead: "디지털 콘텐츠 크리에이터, 픽셀아트·디지털 일러스트·서브컬처 기반 비주얼 콘텐츠 제작", detail: "" },
-        { name: "임서현(아임서연)", tag: "Guest", lead: "라이프스타일 인플루언서, 트렌드·일상·뷰티·패션 중심 SNS 콘텐츠 제작", detail: "" },
+        { name: "유일서현", tag: "Guest", lead: "라이프스타일 인플루언서, 트렌드·일상·뷰티·패션 중심 SNS 콘텐츠 제작", detail: "" },
         { name: "언어덕후", tag: "Guest", lead: "학술·일상툰 콘텐츠 크리에이터, 약 1만 팔로워 기반 지식·언어 콘텐츠 제작", detail: "" },
         { name: "최현준", tag: "Guest", lead: "연세대학교 법학전문대학원 재학, 고려대학교 행정학과 졸업", detail: "" }
       ]
@@ -195,7 +196,6 @@ window.eventContent = {
     "고려대 토론동아리 고란도란",
     "고려대 동유럽 지역전략학회 KUERA",
     "고려대 KUISA",
-    "대학 기후 행동 고려대 지부",
     "연세대·고려대 연합 바이오/생명공학 학회 B.I.O",
     "서강대 마케팅학회 M.A.R.T.",
     "AIESEC 서강대 지부",
@@ -287,6 +287,6 @@ window.eventContent = {
   },
 
   status: {
-    guests: "김유성, Miriam Možgan, Emmy Jerono KIPSOI, Alpha Ibrahima Thiam, Ms. Manduli Katugampola / 영상축사: 문시연, 안철수, 곽상언, 권영세, 박충권, 이준석"
+    guests: "김유성, Miriam Možgan, Emmy Jerono KIPSOI, Alpha Ibrahima Thiam, Ms. Manduli Katugampola / 영상축사: 문시연, 안철수, 이진숙, 곽상언, 권영세, 박충권, 이준석"
   }
 };
