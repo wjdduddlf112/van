@@ -127,7 +127,7 @@ window.eventContent = {
         { name: "김경주", tag: "Guest", lead: "제9대 경주시의회 의원, 문화행정위원회 소속, 지역 문화·행정 분야 의정활동", detail: "" },
         { name: "오종훈", tag: "Guest", lead: "전 SK에너지 대표이사 사장, 전 SK㈜ Portfolio Management 5실장, BM혁신본부장 역임", detail: "" },
         { name: "류성호", tag: "Guest", lead: "BT텔레콤 대표, 에너지 하베스팅·SMP 등 전력변환장치 생산 및 개발", detail: "" },
-        { name: "김형관", tag: "Guest", lead: "CurrentIQ CEO, 전력시장 예측·리스크 및 에너지 인텔리전스 솔루션 분야 활동", detail: "" },
+        { name: "김형관", tag: "Guest", lead: "CurrentIQ CEO, 미국 전력시장 기반 기업 전력비·조달 리스크 분석 소프트웨어 창업", detail: "" },
         { name: "이종성", tag: "Guest", lead: "국토환경뉴스 대표, 철도공학 박사, 전 서울메트로 신사업지원단장, 국내외 철도사업 전문가", detail: "" },
         { name: "오종원", tag: "Guest", lead: "문화예술 종합 월간지 피그헤드랩 사장, 문화예술 콘텐츠 및 미디어 분야 활동", detail: "" },
         { name: "조주형", tag: "Guest", lead: "닥터마케팅 대표, 서울대학교 의과대학 졸업, 의료·헬스케어 마케팅 및 병·의원 브랜딩 총괄", detail: "" },
